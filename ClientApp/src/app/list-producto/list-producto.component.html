@@ -1,0 +1,75 @@
+
+    <div class="row">
+      <div class="col-lg-8">
+        <h1>Lista de productos</h1>
+      </div>
+    </div>
+    <div class="row mt-2">
+        <div class="col-lg-12">
+          <div class="row no-gutters">
+            <div class="col-lg-6">
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" type="button" id="categoriaMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Categorias
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="categoriaMenu">
+                      <button class="dropdown-item active" type="button">Todos</button>
+                      <button class="dropdown-item" type="button">Automovil</button>
+                      <button class="dropdown-item" type="button">Camioneta</button>
+                      <button class="dropdown-item" type="button">Camion</button>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-lg-2 offset-lg-4">
+                <button class="btn btn-success" type="button" data-toggle="modal" data-target="#addProductoModal"><b>Agregar Producto</b></button>
+            </div>
+          </div>
+        </div>
+    </div>
+        <table class="table  mt-3  table-dark table-responsive-lg">
+          <thead>
+            <tr class="text-center">
+              <th scope="col">Referencia</th>
+              <th scope="col">Marca</th>
+              <th scope="col">Categoria</th>
+              <th scope="col">Tamaño</th>
+              <th scope="col">Cantidad</th>
+              <th scope="col">Precio de Compra</th>
+              <th scope="col">Precio de Venta</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="text-center" *ngFor="let producto of varProducto" routerLink="/details-producto/{{producto.referencia}}">
+              <td scope="col">{{producto.referencia}}</td>
+              <td scope="col">{{producto.marca}}</td>
+              <td scope="col">{{producto.categoria}}</td>
+              <td scope="col">{{producto.size}}</td>
+              <td scope="col">{{producto.cantidad}}</td>
+              <td scope="col">{{producto.precioCompra}}</td>
+              <td scope="col">{{producto.precioVenta}}</td>
+            </tr>
+            
+          </tbody>
+        </table>
+
+<!--MODAL-->
+
+<div class="modal fade" id="addProductoModal" tabindex="-1" role="dialog" aria-labelledby="addProductoModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="addProductoModalLabel">Agregar Producto</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <app-add-producto #add></app-add-producto>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-success " (click)="add.addProduct()">Agregar</button>
+          </div>
+      </div>
+    </div>
+  </div>

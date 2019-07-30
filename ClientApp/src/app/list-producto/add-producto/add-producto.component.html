@@ -1,0 +1,33 @@
+<div class="container-fluid">
+    <form>
+      <div class="form-row">
+          <div class="form-group col-md-12">
+              <input [(ngModel)]="varProducto.referencia" class="form-control" name="IReferenciaProducto" type="text" placeholder="Referencia">
+          </div>
+      </div>
+      <div class="form-row">
+          <div class="form-group col-md-6">
+              <input [(ngModel)]="varProducto.marca" class="form-control" name="MarcaProducto" type="text" placeholder="Marca">
+          </div>
+          <div class="form-group col-md-6">
+              <input [(ngModel)]="varProducto.categoria" class="form-control" name="CategoriaProducto" type="text" placeholder="Categoria">
+          </div>
+      </div>
+      <div class="form-row">
+          <div class="form-group col-md-6">
+              <input [(ngModel)]="varProducto.size" class="form-control" name="SizeProducto" type="text" placeholder="Tamaño">
+          </div>
+          <div class="form-group col-md-6">
+              <input [(ngModel)]="varProducto.cantidad" class="form-control" name="CantidadProducto" type="number" placeholder="Cantidad">
+          </div>
+      </div>
+      <div class="form-row">
+          <div class="form-group col-md-6">
+              <input [(ngModel)]="varProducto.precioCompra" class="form-control" name="P_CompraProducto" type="number" placeholder="Precio Compra">
+          </div>
+          <div class="form-group col-md-6">
+              <input [(ngModel)]="varProducto.precioVenta" class="form-control" name="P_VentaProducto" type="number" placeholder="Precio Venta">
+          </div>
+      </div>
+    </form>
+  </div>

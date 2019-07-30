@@ -1,0 +1,13 @@
+/*Link*/
+.Menu-Left{
+    background-color: #fafafa;
+}
+.Menu-Left  a{
+    color: #607d8b;
+}
+ .Menu-Left  .navLeft-1 a{
+     padding-bottom: 25%;
+ }
+ .Menu-Left  a:hover{
+    color:#455a64;
+}
